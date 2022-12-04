@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
- 
+
 *,
 *::before,
 *::after {
@@ -10,37 +10,187 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #F3F2EF;
+  font-family: "Poppins", sans-serif;
+  background-color: #141414;
 }
 .navbar {
-    background-color: white;
-    color: black;
-    min-height: 3.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  background-color: #141414;
+  color: white;
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 5px 0px,
+    rgba(255, 255, 255, 0.3) 0px 0px 1px 0px;
 }
 .navbar a {
-    color: black;
+  color: white;
+}
+.navbar-link a{
+  padding: 0 20px;
+  font-weight: 900;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar-search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.navbar-search input {
+  border-radius: 15px;
+  padding: 5px 10px;
+  border: none;
+  min-width: 20%;
 }
 .card {
-  max-width: fit-content;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  max-width: 100%;
+  width: 20rem;
+  min-height: 28rem;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 5px 0px,
+    rgba(255, 255, 255, 0.3) 0px 0px 1px 0px;
   text-align: center;
+  border-radius: 3px;
 }
-.card-image img{
-  width: 150px;
+.card-image img {
+  width: 100%;
   height: 300px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
 .movie-title {
   font-weight: 600;
-  color: black;
+  color: white;
+  padding: 10px 5px;
 }
-.movie-rating{
-  color: #64748b;
+.movie-details {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 5px;
 }
+.movie-details-rating {
+  color: #f1efdc;
+}
+
+.movie-show {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: auto;
+  bottom: 0px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.movie-show-btn {
+  background: #b12a18;
+  width: 100%;
+  border: none;
+  padding: 5px;
+  color: white;
+  font-weight: 600;
+}
+.movie-show-btn:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(250, 133, 117, 1) 0%,
+    rgba(244, 103, 84, 1) 35%,
+    rgba(179, 36, 0, 1) 100%
+  );
+  cursor: pointer;
+}
+
+.cards-data {
+  margin: 1rem 0;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+a {
+  text-decoration: none;
+}
+.loadar {
+  height: calc(100vh - 3.5rem);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.noResults {
+  height: calc(100vh - 3.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.noResults h2 {
+  color: white;
+}
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.movie-info {
+  display: flex;
+  padding: 1rem;
+  gap: 2rem;
+}
+.movie-info-image {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.movie-info-image img {
+  max-width: 23rem;
+  max-height: 33rem;
+}
+.movie-info-title p {
+  margin-top: 5px;
+  font-weight: 800;
+  text-align: center;
+}
+.movie-info-card {
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 5px 0px,
+    rgba(255, 255, 255, 0.3) 0px 0px 1px 0px;
+  color: white;
+  padding: 1rem;
+  width: 100%;
+  margin:5px 0;
+}
+.movie-info-card h2 {
+  text-align: center;
+}
+.movie-info-head {
+  display: flex;
+  min-width: 100%;
+  gap:10px;
+}
+.rating {
+  font-weight: 400 !important;
+}
+.rating span{
+  color:yellow;
+}
+.movie-info-generale{
+  display:flex;
+  justify-content: space-between;
+}
+.movie-info-details{
+  width: 100%;
+}
+.search-section-title{
+  height: calc(100vh - 3.5rem);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+}
+  
