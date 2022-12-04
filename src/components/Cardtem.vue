@@ -15,7 +15,7 @@
       class="movie-show"
       :to="{ name: 'movieShow', params: { id: imdbId } }"
     >
-      <button class="movie-show-btn">vew</button>
+      <button class="movie-show-btn">view</button>
     </router-link>
   </div>
 </template>
