@@ -5,7 +5,7 @@
       <img :src="image" :alt="movieName" />
     </div>
     <div class="card-body">
-      <p class="movie-title">Name: {{ movieName }}</p>
+      <p class="movie-title">{{ movieName }}</p>
       <div class="movie-details">
         <p class="movie-details-rating">Year: {{ year }}</p>
         <p class="movie-details-rating">Type: {{ type }}</p>
